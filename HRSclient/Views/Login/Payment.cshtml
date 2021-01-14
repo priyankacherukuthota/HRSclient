@@ -1,0 +1,47 @@
+﻿@*@model HRSclient.Models.PaymentDetails*@
+@{
+    ViewBag.Title = "Payment";
+}
+
+<h2>Payment</h2>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>BankId</td>
+            <td>@Html.TextBoxFor(x => x.BankID)</td>
+            <td>@Html.ValidationMessageFor(x => x.BankID, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>BankName</td>
+            <td>@Html.TextBoxFor(x => x.Bankname)</td>
+            <td>@Html.ValidationMessageFor(x => x.Bankname, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Credit cardno</td>
+            <td>@Html.TextBoxFor(x => x.Creditno)</td>
+            <td>@Html.ValidationMessageFor(x => x.Creditno, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Card type</td>
+            <td>@Html.TextBoxFor(x => x.Cardtype)</td>
+            <td>@Html.ValidationMessageFor(x => x.Cardtype, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Nameoncard</td>
+            <td>@Html.TextBoxFor(x => x.Nameoncard)</td>
+            <td>@Html.ValidationMessageFor(x => x.Nameoncard, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>Cvv</td>
+            <td>@Html.PasswordFor(x => x.Cvv)</td>
+            <td>@Html.ValidationMessageFor(x => x.Cvv, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td>expiry Date</td>
+            <td>@Html.TextBoxFor(x => x.Expirydate)</td>
+            <td>@Html.ValidationMessageFor(x => x.Expirydate, "", new { @class = "text-danger" })</td>
+        </tr>
+    </table>
+    <input type="submit" value="PAY NOW" />
+}

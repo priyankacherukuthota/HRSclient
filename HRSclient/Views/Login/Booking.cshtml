@@ -1,0 +1,62 @@
+﻿@*@model HRSclient.Models.BookingDetails*@
+@{
+    ViewBag.Title = "Booking";
+}
+
+<h2>Booking</h2>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>CheckIn</td>
+            <td>@Html.TextBoxFor(x => x.Arrivaldate)</td>
+            <td>@Html.ValidationMessageFor(x => x.Arrivaldate, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>CheckOut</td>
+            <td>@Html.TextBoxFor(x => x.Departuredate)</td>
+            <td>@Html.ValidationMessageFor(x => x.Departuredate, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>No of Adults</td>
+            <td>@Html.TextBoxFor(x => x.Noadult)</td>
+            <td>@Html.ValidationMessageFor(x => x.Noadult, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>No of Child</td>
+            <td>@Html.TextBoxFor(x => x.Nochild)</td>
+            <td>@Html.ValidationMessageFor(x => x.Nochild, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>No of Nights</td>
+            <td>@Html.TextBoxFor(x => x.Nonight)</td>
+            <td>@Html.ValidationMessageFor(x => x.Nonight, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>Total rooms</td>
+            <td>@Html.TextBoxFor(x => x.Totalbookedrooms)</td>
+            <td>@Html.ValidationMessageFor(x => x.Totalbookedrooms, "", new { @class = "text-danger" })</td>
+
+        </tr>
+        <tr>
+            <td>Room Type</td>
+
+            <td>
+                @Html.RadioButtonFor(x => x.Roomtype, "AC")AC
+                @Html.RadioButtonFor(x => x.Roomtype, "NON-AC")NON-AC
+            </td>
+            <td>@Html.ValidationMessageFor(x => x.Roomtype, "", new { @class = "text-danger" })</td>
+
+
+        </tr>
+
+
+    </table>
+    <input type="submit" value="BOOK NOW" />
+}
+

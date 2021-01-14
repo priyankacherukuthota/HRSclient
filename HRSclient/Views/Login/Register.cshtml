@@ -1,0 +1,78 @@
+﻿@model HRSclient.HRSref.LoginDetails
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+
+    <table>
+
+        <tr>
+            <td>CustomerName</td>
+            <td>@Html.TextBoxFor(x => x.CustomerName)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.CustomerName, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(x=>x.Password)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })</td>*@
+
+        </tr>
+        <tr>
+            <td>ConfirmPassword</td>
+            <td>@Html.PasswordFor(x => x.ConfirmPass)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.ConfirmPass, "", new { @class = "text-danger" })</td>*@
+
+        </tr>
+        <tr>
+            <td>Dob</td>
+            <td>@Html.TextBoxFor(x => x.Dob)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Dob, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>Contactno</td>
+            <td>@Html.TextBoxFor(x => x.Contactno)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Contactno, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(x => x.Email)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>@Html.TextBoxFor(x => x.Country)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Country, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Html.TextBoxFor(x => x.City)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.City, "", new { @class = "text-danger" })</td>*@
+        </tr>
+        <tr>
+            <td>Pincode</td>
+            <td>@Html.TextBoxFor(x => x.Pincode)</td>
+            @*<td>@Html.ValidationMessageFor(x => x.Pincode, "", new { @class = "text-danger" })</td>*@
+
+
+        </tr>
+
+
+
+    </table>
+    <input type="submit" value="Register" />
+
+
+
+    if (ViewBag.msg != null)
+    {
+        <script>
+    alert("@ViewBag.msg");
+        </script>
+    }
+
+}
+
+

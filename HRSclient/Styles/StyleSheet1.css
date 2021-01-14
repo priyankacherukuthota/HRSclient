@@ -1,0 +1,81 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.foot {
+    background: linear-gradient(to right, #69aaa2 );
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 200px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+.carousel-inner > .item > img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    float: left;
+}
+
+.form1 {
+    margin: 20px 0px 0px 200px;
+    width: 50%;
+}
+
+.form2 {
+    margin-left: 200px;
+    width: 50%;
+}
+
+.button {
+    margin: 0px 0px 0px 350px;
+}
+
+.block {
+    ​​​​​​​display: block;
+    width: 100%;
+    border: none;
+    background-color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.marqu {
+    position: absolute;
+    top: 80px;
+}
+
+.signup {
+    position: absolute;
+    left: 1100px;
+    top: 500px;
+    background-color: white;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+}
+
+​​​​​​​
